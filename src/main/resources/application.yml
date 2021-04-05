@@ -1,0 +1,32 @@
+debug: true
+#spring:
+#  autoconfigure:
+#    exclude: 
+#      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#      - org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration
+#      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+#      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+com:
+  bracso:
+    demo:
+      transaction:
+        ds1:
+          unique-resource-name: ds1
+          max-pool-size: 5
+          min-pool-size: 1
+          max-life-time: 20000
+          borrow-connection-timeout: 10000
+          xa-data-source-class-name: org.h2.jdbcx.JdbcDataSource
+          xa-properties:
+            user: sa
+            URL: jdbc:h2:mem:ds1;DB_CLOSE_DELAY=-1
+        ds2:
+          unique-resource-name: ds2
+          max-pool-size: 5
+          min-pool-size: 1
+          max-life-time: 20000
+          borrow-connection-timeout: 10000
+          xa-data-source-class-name: org.h2.jdbcx.JdbcDataSource
+          xa-properties:
+            user: sa
+            URL: jdbc:h2:mem:ds2;DB_CLOSE_DELAY=-1
