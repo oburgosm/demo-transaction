@@ -4,8 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
+import com.bracso.demo.transaction.config.DataSourceConfiguration;
+import com.bracso.demo.transaction.config.EM1Configuration;
+
 @SpringBootApplication
-@Import({Ds1Configuration.class, Ds2Configuration.class, EM1Configuration.class, EM2Configuration.class})
+@Import({DataSourceConfiguration.class, EM1Configuration.class})
 public class DemoTransactionApplication {
 
     public static void main(String[] args) {

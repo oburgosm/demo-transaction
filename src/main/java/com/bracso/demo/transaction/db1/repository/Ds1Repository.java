@@ -1,12 +1,13 @@
 package com.bracso.demo.transaction.db1.repository;
 
-import com.bracso.demo.transaction.db1.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.bracso.demo.transaction.db1.entity.Product;
 
 /**
  *
  * @author oburgosm
  */
-public interface Ds1Repository extends JpaRepository<Long, Product> {
+public interface Ds1Repository extends JpaRepository<Product, Long> {
     
 }
