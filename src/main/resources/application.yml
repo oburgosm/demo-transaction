@@ -1,5 +1,11 @@
-debug: true
-#spring:
+spring:
+  datasource:
+    initialization-mode: never
+  jpa:
+    properties:
+      hibernate.hbm2ddl.auto: update
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.connection.autocommit: false
 #  autoconfigure:
 #    exclude: 
 #      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

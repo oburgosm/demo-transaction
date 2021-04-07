@@ -27,7 +27,7 @@ public class EM1Configuration {
                 .persistenceUnit("ds1PersistenceUnit")
                 .properties(jpaConfiguration.getProperties())
                 .jta(true)
-                .packages("com.bracso.demo.transaction.db1.entity")
+                .packages("com.bracso.demo.transaction.entities")
                 .build();
     }
 
